@@ -20,6 +20,8 @@ export class ProductsController {
 
   @Post()
   create(@Body() createProductDto: CreateProductDto) {
+    console.log('datos recibidos para insercion');
+    console.log(createProductDto);
     return this.productsService.create(createProductDto);
   }
 
